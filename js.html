@@ -1,0 +1,342 @@
+<!doctype html>
+<html>
+<head>
+<title>JS</title>
+<meta name="description" content="learn js">
+<meta name="keyword" content="js">
+<meta name="author" content="abc">
+<link rel="stylesheet" type="text/css" href="jsstyle.css"> 
+</head>
+<body   onload=set_timee()>
+
+ <header>
+ <div class="id6">
+<nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="htmlpage.html">HTML</a></li>
+      <li><a href="css.html">CSS</a></li>
+      <li><a href="#">JavaScript</a></li>
+    </ul>
+	<nav>
+
+ </div>
+ </header>
+ 
+ <h1>Java Script</h1>
+ <div class="id5">
+ <h2><u>What is JS?</u></h2>
+ <ul>
+ <li>A lightweight scripting language.
+<li>Create in 1995 by Brendan Eich, originally called LiveScript.</li>
+<li>Interpreted language.</li>
+<li> Most modern JS interpreter uses technique called Just-InTime(JIT) compiling to improve performance.</li>
+<li> JS source code gets compiled into a faster binary format
+while the script is being used, so that it can run as quickly as
+possible.</li>
+<li> Since compilation happens in runtime rather ahead-of-time,
+JS is considered as interpreted language.</li>
+<li> Client-Side and Server-side code:
+<ul>
+<li> Client-side code runs on the user’s computer, code is downloaded and run by the browser.</li>
+<li> Server-side code runs on the server, then its results are downloaded and displayed in the browser. </li>
+</ul></li></ul>
+
+
+
+<div   id="ch_pic">
+<img src="" width="300" height="200" id="pic">
+</div>
+
+
+<script>
+
+
+
+var s=1;
+function set_timee()
+{
+setInterval(image_show,1000);
+}
+
+function image_show()
+{
+var i;
+   if(s==1)
+  {
+   i="jslogo.png";
+   }
+   else if(s==2)
+   {
+   i="csslogo.png";
+   }
+   else if(s==3)
+   {
+   i="htmllogo.png";
+   }
+   else if(s==4)
+   {
+  i="jslogo.png";
+  }
+   
+   else
+   {
+   s=1;
+   }
+   document.getElementById("pic").src=""+i;
+   s++;
+}
+</script>
+
+<h2>Ways to add JS to a document</h2>
+<h3>Internal JS:</h3>
+<p>-Within HTML file embed your JS code wrapping inside
+&lt;script&gt; and &lt;/script&gt; tag.
+</p>
+<h3>External js:</h3>
+<p>Write your JS code in a separate file with .js extension, and
+add the file using:<br>
+&lt;script src=“example.js” defer&gt;&lt;/script&gt; in the head section.<br>
+** defer attribute tells browser to continue downloading html content
+and simultaneously load JS code.<br>
+** Don’t forget Separation of Concern. 
+</p>
+<hr>
+<h2><u> Comments in JS</u></h2>
+<p>- Single line comment: // and multi-line comment: /* */. </p>
+<h2> <u>Vriables in JS</u></h2>
+<ul>
+<li> <u>Declaring Variables:</u>
+<ul>
+<li>Using keyword var or let followed by the name of variable.
+ex. let name;</li>
+<li> Declaration makes value of the variable “undefined”.</li>
+</u></li>
+<li><u>Initializing Variable:</u>
+<ul>
+<li>name = “Your Name”;</li>
+<li>Declaration and initialization may be done in same line.</li>
+<li>Variable naming rule: /* SAME AS OTHER LANGUAGE YOU HAVE STUDIED.*/</li>
+</ul>
+</li>
+<li> <u>Variable Type:</u>
+<ul>
+<li> Numbers: Either integers or floating point number.</li>
+<li> Not required to explicitly declare type.</li>
+<li> Strings: Text wrapped in either single quotes or double quotes.<br>
+ ex. let name = “Your Name”;</li>
+<li> Boolean: true/false.<br>
+ex. let test = 6 < 3;</li>
+<li>Arrays: Single object with multiple values.
+<br>ex. let marks = [70,80,87];</li>
+<li> Accessing individual element: marks[0];</li>
+<li> Object: In JS object are represented as:
+let student = {Name: “Your Name”, RollNo: 42};</li>
+<li> For retrieving information: person.Name;</li>
+</ul>
+</li></ul>
+
+<h2><u>Array</u></h2>
+<ul>
+<li>Creating arrays:<br>
+let books = [“Book 1”,”Book 2”, “Book 3”];</li>
+<li>Array can store various data types: strings, numbers, objects and other
+array.</li>
+<li>We can mix data types in array.<br>
+ex. let random = [“Book 4”, 42, [21,”78”,90]];</li>
+<li>Adding and removing elements from end of the array: push() and pop().</li>
+<li>Adding and removing elements from the beginning: unshift() and shift().</li>
+</ul>
+<hr>
+<h2><u>Function</u></h2>
+<ul>
+<li>
+Set of statements that performs a task/computation.</li>
+<li>Declaration: starts with keyword function followed by name of the function, list of
+coma separated parameters and statements inside curly braces.
+<pre>ex. function print_hello(name){
+console.log(“Hello ” +name);
+}</pre></li>
+<li> primitive parameters such as number are passed to function by value.
+<li> changes inside the function is not reflected globally.
+<li> Non-primitive value like Array or user-defined object when passed as
+parameter, changes in the properties done inside the function are visible globally.
+<li>Function Expression:
+<pre>
+ Can assign function to a variable anonymously or by giving it a name.
+--- ex. const square = function(num){
+return num ** 2;
+} -→ square(4);
+const factorial = function fac(num){
+return num < 2 ? 1 : num * fac(num – 1);
+} → console.log(factorial(3));
+</pre></li>
+<li>Function expression are convenient
+when passing a function as an
+argument to another function.
+<h4>Example</h4>
+<pre><p class="id2">
+ function map(f,a){
+  let result = [];
+  for(let i=0; i&lt;a.length; i++){
+  result[i] = f(a[i]);
+  }
+  return result;
+   }</p></pre></li>
+<li>Calling function: invoke with function
+name and required parameter. </li>
+</ul>
+<h3>Argument Object</h3>
+<ul>
+ <li>Arguments in a function are maintained in an array-like object called arguments and can be accessed like array
+starting with ordinal no. 0.</li>
+<li>Total number of argument is indicated by arguments.length.</li>
+<li>Example<br>
+<pre><p class="id2">
+ function myConCat(separator){
+ let result = ‘’;
+ for(let i=1;i&lt;arguments.length; i++){
+ result += arguments[i] + separator;
+  }
+ return result; 
+ }</p></pre> </li>
+ </ul>
+<hr>
+<h2>Object</h2>
+<ul>
+<li>Collection of properties, and a property is an association between a name/key and a value.</li>
+<li>A property value can be a function or any other type. It is same as any JS variable and attached to an object.</li>
+<li>Property of an object can be accessed using dot notion, i.e. object_name.property_name;</li>
+<li>object name and property name are case sensitive.</li>
+<li> Creating Object using new keyword:<br>
+<pre><p class="id2">
+let book = new Object();
+book.name = “Book 1”;
+book.author = “Author 1”;
+book.publisher = “publisher 1”;  -> book.name;
+</p></pre></li>
+</ul>
+<hr>
+<h2>Dom Manipulation and Event Handling</h2>
+
+<h3>Use cases of Events in JS:</h3>
+<ul>
+<li> User hovers the cursor over a certain element.</li>
+<li> User Chooses a key on the keyboard.</li>
+<li> Page Loaded.</li>
+<li> Form Submitted.</li>
+<li> Video is played, paused or finished.</li>
+</li> Error occurs. </li>
+</ul>
+<h3>Ways to Adding Event Handler</h3>
+<ul>
+<li>Using Event Handler Property:<br>
+Example:<br>
+<pre><p class="id2">
+ const btn = document.getElementById(“idButton”);
+btn.onclick = function(){
+//code;
+}</p></pre></li>
+<li> Inline Event Handler:<br>
+Example:<br>
+<pre><p class="id2">
+<button onclick = “doSomething()”>Click</Button>
+function doSomething(){
+//code;
+  }</p></pre></li>
+<li> addEventListener() and removeEventListener():<br>
+    window.addEventListener(“load”,getDateAndTime);
+<ul>
+<li>getDateAndTime is a function called Callbacks, i.e. we are passing
+function as value to another function.</li>
+</li> load is a kind of event that is associated with window global
+object.</li>
+ newest type of event handling mechanism, defined DOM level 2 specification.
+<li> remomeEventListener(), removes a previously added listener.</li>
+<li> window.removeEventListener(“load”,getDateAndTime);
+<ul>
+<li>This is can improve efficiency for large programs by cleaning unused event handlers.<li>
+<li>Allows to use same widget for performing different actions in different circumstances, by adding
+or removing event handler.</li></ul></li>
+</ul>
+<hr>
+<h3>Accessing DOM Element</h3>
+<p>Can be accessed by ID, Class and Query Selector. </p>
+<h4><u>Accessing by ID :</u></h4>
+<p>Access single element in the DOM by its unique
+ID with getElementById() method of the document object.<br>
+ex. var para = document.getElementById(“date”); <br>
+<u>Drowback</u>:Since ID is unique, so can able to access a single
+element at a time. 
+ </p>
+ <h4><u>Accessing by Class:</u></h4>
+<p> Method: document.getElementByClassName();<br>
+If a class is attached to multiple element then we have to
+access with index notation.<p>
+<pre><p class="id2">
+ex– var classVar = document.getElementByClassName();
+for(var i=0;i<classVar.length;i++)
+classVar[i].style.color = “red”;
+</p></pre>
+<h4><u>Query Selectors:</u></h4>
+<ul>
+<li>Methods : document.querySelector(); → For accessing Single Element.<br>
+document.querySelectorAll(); -→ For accessing Multiple elements.</li>
+<li>If selector is ID, then we prefix the query with # in parameter and if it is class we prefix it with dot.</li>
+<li>ex. var var1 = document.quearySelector(#demoQuery);<br>
+var var2 = document.querySelectorAll(.demQueryAll);</li>
+</ul>
+<h4><u>Traversing DOM Element:</u></h4>
+<ul>
+<li>document object is the root of every node in DOM. It is a property of the window global object.</li>
+<li>Nodes in the DOM are refereed to as parents, children, and sibling depending their relationship with other
+element.</li></ul>
+<hr>
+<h2>Introduction to jQuery</h2>
+<ul>
+<li>jQuery is a JS library, used for writing common JS tasks more concisely.</li>
+<li>jQuery can be included in two ways in your project:</li>
+<li>Downloading and including as a script just like regular JS file.</li>
+<li> Link to a file via Content Delivery Network (CDN).</li>
+<li>jQuery code are wrapped inside:
+<pre><p class="id2">
+$(document).ready(function(){
+//Code;
+});</p></pre>
+</li>
+<li>jQuery will detect this state of readiness so that code included inside this function will run once the
+DOM is ready for JS code to execute. 
+<pre><p class="id2">
+$(“selector”).method();
+--- ex. $(“.jQtest”).html(“Hello from jQuery.”);
+</p></pre>
+</li>
+</ul>
+<hr>
+<h2>jQuery Selector</h2>
+<ul>
+<li>Selectors are how we tell jQuery which elements we want to work on. To access a selector we use $
+followed by parenthesis.,</li>
+<li>Commonly used selectors:
+<ul>
+<li>$(“*”) : Wildcard, selects every elements on the page.</li>
+<li>$(“this”): Current, selects the current element being operated on within a function.</li>
+<li> $(“p”): Tag, selects every instance of the &lt;p&gt; tag.</li>
+<li>$(“.example”): Class: selects every element that has the example class applied to it.</li>
+<li>$(“#example”): Id, selects a single instance of the unique example id.</li>
+<li> $(“[type=‘text’]”): Attribute, selects any element with text applied to the type.</li>
+<li> $(“p:first-of-type”): Pseudo Element, selects the first &lt;p&gt;.</li>
+</ul></li></ul>
+<pre><p class="id2">
+Ex. Case: $(document).ready(
+$(“#btn”).click(function(){
+$(“#jQtest”).html(“Hello again.”);
+}); );</p></pre>
+</div><br>
+<hr>
+<footer>
+<p>Author: ABC<br>
+Contact us :  1121284516</p>
+</footer>
+</body>
+</html>

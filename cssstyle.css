@@ -1,0 +1,107 @@
+header ul
+{
+float:right;
+list-style-type: none;
+margin-top:25px;
+
+}
+
+header{
+background-color:black;
+	height:60px;
+}
+header ul li
+{
+display: inline-block;
+}
+header ul li a
+{
+text-decoration: none;
+color: white;
+font-weight:bold;
+padding: 5px 30px;
+transition :0.6s ease;
+}
+header ul li a:hover
+{
+background-color:#2f4f4f;
+color:#fff;
+}
+
+ 
+header ul li a:active
+{
+color:blue;
+}
+
+body
+{
+	background-image:url(background.jpg);
+	background-size:1000px;
+}
+h1
+{
+	position:relative;
+	left:40px;
+  top:5px;
+ color:#2f4f4f;
+ text-shadow:4px 4px  #708090;
+text-decoration:underline;
+text-align:center;
+font-size:60px;
+}
+.id5
+{
+	position:relative;
+	top:30px;
+	left:30px;
+}
+.id1
+{
+	border-style:solid;
+position:relative;
+left:420px;
+top:10px;
+height:100px;
+width:400px;
+margin-bottom:10px;
+}
+
+div iframe{
+position:relative;
+top:10px;
+left:30px;
+width:400px;
+border-style:solid;
+border-color:green black green black;
+border-width:10px;
+background-color:white;
+margin-bottom:15px;
+box-shadow:0px 30px 30px gray;
+
+}
+#ch_pic
+{
+	border-style:solid;
+	width:300px;
+	height:200px;
+	position:absolute;
+	left:850px;
+	top:50px;
+	box-shadow:0px 2px 30px green;
+}
+
+.id3
+{
+	border-style:solid;
+	border-color:green black green black;
+	width:350px;
+	border-width:10px;
+	background-color:white;
+	margin-bottom:10px;
+	box-shadow:0px 30px 30px gray;
+}
+h2
+{
+ text-shadow:2px 1px  #708090;
+}

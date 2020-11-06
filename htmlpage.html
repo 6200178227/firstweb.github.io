@@ -1,0 +1,421 @@
+<!doctype html>
+<html>
+<head>
+<title>HTML</title>
+<meta name="description" content="learn html">
+<meta name="keyword" content="html">
+<meta name="author" content="abc">
+<link rel="stylesheet" type="text/css" href="htmlstyle.css"> 
+</head>
+<body   onload=set_timee()>
+ <header>
+<div >
+
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#">HTML</a></li>
+      <li><a href="css.html">CSS</a></li>
+      <li><a href="js.html">JavaScript</a></li>
+    
+    </ul>
+</div>
+ </header>
+<h1>HTML</h1>
+<div class="id5">
+<h2>What is HTML ?</h2>
+<ul>
+<li> HTML is a mark-up language that lets us use tags to define structure
+referred to as DOM {Document Object Model} to <br> create visual rendering of
+the page.</li>
+<li>HTML is the standard markup language for creating Web pages</li>
+<li>HTML describes the structure of a Web page</li>
+<li>HTML consists of a series of elements</li>
+<li>HTML elements tell the browser how to display the content</li>
+<li>HTML elements label pieces of content such as "this is a heading", "this is a paragraph", "this is a link", etc.
+</li>
+<li>It Consists of series of elements which we use to enclose, wrap or markup
+different parts of the contents to make it <br> appear or act in certain way.</li>
+<li>HTML is case in-sensitive. </li>
+</ul>
+<div   id="ch_pic">
+<img src="" width="300" height="200" id="pic">
+</div>
+
+
+<script>
+
+
+
+var s=1;
+function set_timee()
+{
+setInterval(image_show,1000);
+}
+
+function image_show()
+{
+var i;
+   if(s==1)
+  {
+   i="jslogo.png";
+   }
+   else if(s==2)
+   {
+   i="csslogo.png";
+   }
+   else if(s==3)
+   {
+   i="htmllogo.png";
+   }
+   else if(s==4)
+   {
+  i="jslogo.png";
+  }
+   
+   else
+   {
+   s=1;
+   }
+   document.getElementById("pic").src=""+i;
+   s++;
+}
+</script>
+
+<!--iframe-->
+<h4>A Simple HTML Document</h4>
+<iframe src="prog1.txt" width="300" height="200" class="id4"></iframe>
+<hr>
+<h2>DOM</h2>
+<p>DOM is a hierarchical structure and can be easily represented using
+tree-diagram, which intern captures the notion of parent-child relationship
+between tags/elements.
+</p>
+
+<img src="dom.png" class="id1">
+<hr>
+<h3 class="id3">Basic building block of HTML :</h3>
+<figure>
+<figcaption > HTML building block</figcaption>
+<img src="html-building-blocks.png" class="id2">
+
+<figure>
+<ul>
+<li>
+ <b>Opening Tag</b>: This consists of name of the element. It marks where the
+element begins.</li>
+<li><b>Content</b>: Information of the element.</li>
+<li> <b>Closing Tag</b>: This marks end of the element and it precedes tag name with a
+forward slash. </li>
+</ul>
+<hr>
+<h2>HTML Attributes</h2>
+<p>HTML attributes provide additional information about HTML elements.</p>
+<ul>
+  <li>All HTML elements can have <b>attributes</b></li>
+  <li>Attributes provide <b>additional information</b> about elements</li>
+  <li>Attributes are always specified in <b>the start tag</b></li>
+  <li>Attributes usually come in name/value pairs like: <b>name=&quot;value&quot;</b></li>
+</ul>
+
+<h4>The href Attribute</h4>
+<P>The &lt;a&gt; tag defines a hyperlink. The <u>href </u>attribute specifies the URL of the page the link goes to:</P>
+<h4>Example</h4>
+<p style="color:green;">&lt;a href=&quot;picture1.jpg&quot;&gt;image;/a&gt;</p>
+<h4>The src Attribute</h4>
+<P>The &lt;img&gt; tag is used to embed an image in an HTML page. The <u>src</u> attribute specifies the path to the image to be displayed:</p>
+<h4>Example</h4>
+<p style="color:green;">&lt;img href=&quot;picture1.jpg&quot;&gt;</p>
+
+<p>There are two ways to specify the URL in the <u>src</u> 
+attribute:</p>
+<p><strong>1. Absolute URL</strong> - Links to an external image that is hosted 
+on another website.
+ Example: src=&quot;https://www.something.com/images/img_girl.jpg&quot;.</p>
+<p><strong>Notes:</strong> External images might be under copyright. If you do 
+not get permission to use it, you may be in violation of copyright laws. In 
+addition, you cannot control external images; it can suddenly be<br> removed or 
+changed.</p>
+<p><strong>2. Relative URL</strong> - Links to an image that is hosted within 
+the website. Here, the URL does not include the domain name. If the URL begins 
+without a slash, it will be relative to the current page.<br> Example: src=&quot;img_girl.jpg&quot;. 
+If the URL begins with a slash, it will be relative to the domain. Example: src=&quot;/images/img_girl.jpg&quot;.</p>
+<hr>
+<h2>HTML Block and Inline Elements</h2>
+Every HTML element has a default display value, depending on what type of element it is.
+
+There are two display values: block and inline.
+<h3>Block-level Elements</h3>
+<ol>
+<li>These elements are the structural element of HTML.</li>
+<li> These forms the visible parts of the page. A block-level element appear in new
+line following the content that precedes it.</li>
+<li> Ex.: Heading, Paragraph, Lists, Navigation, Footer and so on.</li>
+<li> Block-level elements can be nested within another block-level element but not
+within a inline-element.</li>
+</ol>
+<h3>Inline Element:</h3>
+<ol>
+ <li>Inline Element are contained within block-level element and surrounds only small
+parts of the document.</li>
+<li>No new line after inline element in the document.</li>
+<li> Ex. Include: &lt;a&gt; , &lt;em&gt;, &lt;strong&gt; and many more.</li>
+</ol>
+<hr>
+<h2>HTML Comments</h2>
+<ol>
+<li> The purpose of comments is to allow us to include notes in the code to explain
+our logic.</li>
+<li> Browser ignores comments.</li>
+<li> &lt;!-- --&gt;</li>
+</ol>
+<hr>
+<h2>&lt;meta&gt; element</h2>
+<ol>
+<li>Metadata is the data that describes data, and &lt;meta&gt; element achieves this.
+<li> ex. For specifying character set of the document:
+&lt;meta charset=“utf-8”&gt;</li>
+<li> ex, adding author and description:
+&lt;meta name=“author” content=“Anirban Choudhury”&gt;
+&lt;meta name=“description” content=“Basics of HTML.”&gt;
+</li>
+</ol>
+<hr>
+<h2>List Element</h2>
+<h3>Un-ordered list :</h3>
+Un-ordered list are used to mark up lists of items for which
+the order of the item doesn’t matter. 
+<h4>Example:</h4>
+<pre><p class="id7">
+&lt;ul&gt;
+&lt;li&gt Book&lt;/li&gt;
+&lt;li&gtPen&lt;/li&gt;
+&lt;/ul&gt;</p></pre>
+<h3> Ordered List :</h3>
+In ordered list, order of the item does matter.
+ <h4>Example:</h4>
+ <pre><p class="id7">
+&lt;ol&gt;
+&lt;li&gt; Go straight&lt;/li&gt;
+&lt;li&gt;Turn Left&lt;/li&gt;
+&lt;/ol&gt;</p></pre>
+</ol>
+<h3>Description List :</h3>
+<li>The propose of this list is to markup a set of item and their associated
+descriptions, such as terms and definitions.</li>
+<li> It uses &lt;dl&gt; as a wrapper and in addition uses &lt;dt&gt; (description term)
+element, and each description is wrapped in a &li;dd&gt; (description definition)
+element. </li>
+
+<h4>example</h4>
+<pre><p class="id7">
+&lt;dl&gt;<br>
+&lt;dt&gt;Computer Science&lt;/dt&gt;<br>
+&lt;dd&gt;Evolving&lt;/dd&gt;<br>
+&lt;/dl&gt;
+</p></pre>
+<hr>
+
+<ul>
+<li> <strong>Emphasis element&lt;em&gt;</strong> :
+<ul>
+<li> When we want to stress some words, there by subtly altering its meaning, we
+use &lt;em&gt; element to that.</li>
+<li>Browser style it as italics by default.</li>
+<li>ex. &lt;p&gt I am &lt;em&gt; glad&lt;/em&gt; you weren’t &lt;em&gt;late&lt;/em&gt;&lt;/p&gt;</li>
+</ul>
+</li>
+<li> <strong> &lt;strong&gt; element</strong> 
+<ul>
+ <li>To give importance to certain words we use &lt;strong&gt; element.</li>
+<li> By default browser renders it in bold.</li>
+</ul>
+</li>
+<li><strong> Bold &lt;b&gt;, Italics&lt;i&gt;, and Underline &lt;u&gt;</strong> :
+<ul>
+ <li>Elements of HTML has associated semantics.</li>
+<li> However, &lt;b&gt;,&lt;i&gt; and &lt;u&gt; only affect presentation and not semantics.</li>
+</ul>
+</li>
+</ul>
+
+<hr>
+
+<h2> Document Structure</h2>
+Semantic mark up provided by dedicated tags for inducing structure in a
+document.
+<ol>
+<li>Header: &lt;header&gt;</li>
+<li>Navigation bar: &lt;nav&gt;</li>
+<li>Main Content: &lt;main&gt;, with various content sub-subsection represented by
+&lt;article>,&lt;section&gt;,&lt;div&gt;</li>
+<li>Sidebar: &lt;aside&gt;</li>
+<li>Footer: &lt;footer&gt;</li>
+
+<h3> <u>description :</u></h3>
+<ul>
+<li>Header,&lt;header&gt;:
+<ul>
+<li>Represents a group of introductory content.</li>
+<li>Defines global header of web page, when placed as a child of &lt;body&gt;.</li>
+<li>Defines specific header of a particular section, when wrapped inside
+&lt;article&gt; for instance.</li>
+</ul>
+</li>
+<li>navigation &lt;nav&gt;:
+<ul>
+<li>Navigation functionality for the page.</li>
+<li>Usually represented by menu buttons, links or tabs. </li>
+</ul>
+</li>
+
+
+<li> &lt;main&gt;:
+<ul>
+<li>Area in page that contains most of the unique content of a given web
+page.</li>
+<li>This part of the website vary from page to page.</li>
+<li>&lt;article&gt;:
+Encloses a block of related content that makes sense on its own
+without the rest of the page. (ex. Single blog post.)</li>
+<li>&lt;section&gt;:
+ Similar to &lt;article&gt;, but it is more for grouping together a single part
+of the page that constitute one single piece of information.
+ Ex., A mini-map or a set of articles.
+&lt;article&gt; can be break up into several &lt;section&gt; or vice versa. </li>
+</ul>
+</li>
+
+<li> &lt;aside&gt;:
+<ul>
+<li>Contains contents that is not directly related to main content but can
+provide additional information indirectly related to it and some recurring
+information persisting across all pages.</li>
+<li>ex. Glossary entries, Author information, Related links, etc.</li>
+</ul>
+</li>
+<li> &lt;footer&gt;:
+<ul>
+<li>Represents a group of end-content for a page.</li>
+<li>enerally includes, copyright information or contact information.</li>
+<li>Place to put common information, like header but usually not critical to
+the website.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2>Non-Semantic Element</h2>
+<ol>
+<li>No ideal semantic element to group some items together or wrap some
+content.</li>
+<li>Grouping set of element together to affect them as a single entity for
+further CSS and JavaScript processing.</li>
+<li> <strong>&lt;span&gt;:</strong>
+<ol>
+ <li>Inline non-semantic element.</li>
+<li>Should only be used when no other semantic element are
+appropriate for the context and in situation where intension is not to adhere
+to any specific semantic structure.</li>
+<li>Example<br>
+<pre><p class="id7">
+&lt;p&gt;
+Computation is, 
+&lt;span class=“epoch”&gt;exiting&lt;/span&gt;.
+&lt;/p&gt;</p></pre>
+</li>
+</ol></li>
+ <li><strong>&lt;div&gt;:</strong>
+ <ol>
+<li> Block-level non-semantic element.</li>
+<li>Should only be used when no other semantic element are
+appropriate for the context and in situation where intension is not to
+adhere to any specific semantic structure.</li>
+<li>Example<br>
+<pre><p class="id7">
+ &lt;div class=“sitemap”&gt;
+&lt;h5&gt;Sitemap&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt; &lt;a href=“#”&gt;Home.&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=“#”&gt;About Us.&lt;/a&gt;&lt;/li&gt; 
+&lt;/ul&gt;
+&lt;/div&gt;</p></pre>
+</li></ol>
+</li></ol>
+<hr>
+<h2>Quotations</h2>
+Either block-level or inline quotation are permissible in HTML.
+<ul>
+<li><strong>Blockquotes:</strong><br>
+<ul>
+<li>Section of block-level content (be it paragraph, multiple paragraph, a list
+etc.) is quoted from some where else. </li>
+<li>Wrap inside &lt;blockquote&gt; element to signify the url.</li>
+<li>Cite attribute for pointing to the source.</li>
+<li>Example:<br>
+<pre><p class="id7">
+ &lt;blockquote cite = “http://www.abc.com”&gt;
+ &lt;p&gt;
+To be or not to be.
+&lt;/p&gt;
+&lt;/blockquote&gt;</p></pre>
+</li>
+<li>Browser default styling will render this as a quote.</li> 
+</ul></li>
+<li><strong>Inline quotation:</strong><br>
+<ul>
+<li>Inline quotation works same way, except that they use the &lt;q&gt; element.</li>
+<li>Example:<br> 
+<pre><p class="id7">
+&lt;p&gt;The quote element:
+&lt;q&gt; cite=“http://www.abc.com”>To be or not to be, that is the question.&lt;/q&gt;
+&lt;/p&gt;</p></pre>
+</li>
+</ul></li>
+<li><strong>Citation:</strong><br><cite> element is used to show resource being cited in page.
+<br>Example<br>
+<pre><p class="id7">
+ &lt;p&gt;According to the &lt;a href=“http://www.abc.com”&gt;
+&lt;cite&gt;ABC quotes:&lt;/cite&gt;
+&lt;/a&gt;&lt;/p&gt;</p></pre>
+</li>
+<h2><u>HTML Tables</u></h2>
+<p>HTML tables allow web developers to arrange data into rows and columns.</p>
+<h3>Define an HTML Table</h3>
+he &lt;table&gt; tag defines an HTML table.
+
+Each table row is defined with a &lt;tr&gt; tag. Each table header is defined with a &lt;th&gt; tag. Each table data/cell is defined with a &lt;td&gt; tag.
+
+By default, the text in &lt;th&gt; elements are bold and centered.
+
+By default, the text in &lt;td&gt; elements are regular and left-aligned.
+ <h4>Example</h4>
+ A simple HTML table:
+ <pre><p class="id7">
+&lt;table style="width:100%"&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Firstname&lt;/th&gt;
+    &lt;th&gt;Lastname&lt;/th&gt;
+    &lt;th&gt;Age&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Jill&lt;/td&gt;
+    &lt;td&gt;Smith&lt;/td&gt;
+    &lt;td&gt;50&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Eve&lt;/td&gt;
+    &lt;td&gt;Jackson&lt;/td&gt;
+    &lt;td&gt;94&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+
+ </p>
+ </pre>
+
+</div>
+<hr>
+<footer>
+<p>Author: ABC<br>
+Contact us :  1121284516</p>
+</footer>
+</body>
+</html>
